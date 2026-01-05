@@ -147,6 +147,7 @@ For product-focused meetings, combine this tool with [claude-code-requirements-b
 ```
 
 **Stage 1** captures *what to do next* (tasks, follow-ups).
+
 **Stage 2** captures *what to build* (requirements, specs).
 
 ## License
