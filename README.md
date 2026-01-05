@@ -120,10 +120,34 @@ The generated summary follows the [EOS (Entrepreneurial Operating System)](https
     └── github-project-config.md    # Repo detection patterns
 ```
 
-## Related Tools
+## Pairing with Requirements Builder
 
-For product-focused meetings where you need to extract requirements into a PRD, pair this with:
-- [claude-code-requirements-builder](https://github.com/rizethereum/claude-code-requirements-builder)
+For product-focused meetings, combine this tool with [claude-code-requirements-builder](https://github.com/rizethereum/claude-code-requirements-builder):
+
+**Example: After a product discovery call**
+
+```bash
+# Stage 1: Operational processing
+> /process-meeting discovery call
+
+# Creates GitHub issues for action items:
+# - #42: Schedule follow-up demo
+# - #43: Send pricing proposal
+# Generates L10 summary with WHO/WHAT/WHEN
+
+# Stage 2: Requirements extraction
+> /requirements-builder
+
+# Paste the same Fireflies transcript when prompted
+# Extracts product requirements discussed:
+# - User needs bulk import feature
+# - Must integrate with Salesforce
+# - Target: 50 concurrent users
+# Outputs structured PRD
+```
+
+**Stage 1** captures *what to do next* (tasks, follow-ups).
+**Stage 2** captures *what to build* (requirements, specs).
 
 ## License
 
